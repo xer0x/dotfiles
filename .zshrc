@@ -5,8 +5,12 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+
+# clean in sentences
 ZSH_THEME="dstufft"
-ZSH_THEME="blinks"
+
+# Like blinks, but it uses 256 colors, so it breaks with Solarized
+#ZSH_THEME="blinks"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -30,9 +34,10 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git sublime)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 source ~/.extras
+source ~/.aliases
