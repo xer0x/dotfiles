@@ -14,6 +14,9 @@ alias s="subl ."
 alias o="open"
 alias oo="open ."
 
+# Pager can show colours
+alias less="less -R"
+
 # List all files colorized in long format
 alias l="ls -Gl"
 
@@ -53,10 +56,10 @@ alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Canonical hex dump; some systems have this symlinked
-type hd > /dev/null || alias hd="hexdump -C"
+which hd > /dev/null || alias hd="hexdump -C"
 
 # OS X has no `md5sum`, so use `md5` as a fallback
-type md5sum > /dev/null || alias md5sum="md5"
+which md5sum > /dev/null || alias md5sum="md5"
 
 # Trim new lines and copy to clipboard
 alias c="tr -d '\n' | pbcopy"

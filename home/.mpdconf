@@ -1,0 +1,16 @@
+# MPD - music player daemon
+#
+# http://mpd.wikia.com/wiki/Configuration
+
+port                    "6600"
+music_directory         "~/music"
+playlist_directory      "~/.mpd/playlists"
+db_file                 "~/.mpd/mpd.db"
+log_file                "~/.mpd/mpd.log"
+pid_file                "~/.mpd/mpd.pid"
+
+audio_output {
+        type            "osx"
+        name            "My Mac Device"
+        mixer_type      "software"
+}

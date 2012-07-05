@@ -41,3 +41,9 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 source ~/.extras
 source ~/.aliases
+
+# Trying out Z, it's like J:autojump but more popular on Github
+ . `brew --prefix`/etc/profile.d/z.sh
+ function precmd () {
+   z --add "$(pwd -P)"
+ }

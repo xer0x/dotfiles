@@ -1,6 +1,7 @@
 [alias]
 	# View the SHA, description, and history graph of the latest 20 commits
-	l = log --pretty=oneline -n 20 --graph
+	l = log --pretty=format:'%x09%C(yellow)%h%C(reset)  %an  %s %C(green bold)(%ad)%C(reset)%C(green)%d%C(reset)' --date=relative --graph -n 20
+	ll = log --pretty=medium --date=relative --graph
 	# View the current working tree status using the short format
 	s = status -s
 	# Diff
@@ -15,6 +16,11 @@
 	go = checkout -B
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+
+[format]
+	pretty = format:%x09%C(yellow)%h%C(reset)  %an  %s %C(green bold)(%ad)%C(reset)%C(green)%d%C(reset)
+[log]
+	date = relative
 
 [apply]
 	# Detect whitespace errors when applying a patch
