@@ -1,2 +1,3 @@
 # Automatically normalize line endings for all text-based files
-* text=auto
+#* text=auto
+# Always changing line endings is lame. Makes cloning repos tricky

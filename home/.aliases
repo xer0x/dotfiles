@@ -16,6 +16,7 @@ alias oo="open ."
 
 # Pager can show colours
 alias less="less -R"
+alias mpg123="mpg123 --control"
 
 # List all files colorized in long format
 alias l="ls -Gl"
