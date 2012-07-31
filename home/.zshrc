@@ -43,7 +43,10 @@ source ~/.extras
 source ~/.aliases
 
 # Trying out Z, it's like J:autojump but more popular on Github
- . `brew --prefix`/etc/profile.d/z.sh
- function precmd () {
-   z --add "$(pwd -P)"
- }
+. `brew --prefix`/etc/profile.d/z.sh
+function precmd () {
+  z --add "$(pwd -P)"
+}
+
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
