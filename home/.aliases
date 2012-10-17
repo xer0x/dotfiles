@@ -1,3 +1,5 @@
+alias jirash="~/Dropbox/code/jirash/bin/jirash"
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
