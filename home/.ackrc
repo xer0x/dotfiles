@@ -1,0 +1,10 @@
+--type-set=email=.email
+--type-set=ejs=.ejs
+--type-set=xlf=.xlf
+--type-add=jsp=.jinc
+--type-add=jsp=.tag
+--type=noxlf
+--ignore-dir=static/script/Meetup/packed
+--ignore-dir=node_modules
+--ignore-dir=deps/node
+--ignore-case
