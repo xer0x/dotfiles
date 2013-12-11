@@ -1,54 +1,40 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-
-# clean in sentences
-ZSH_THEME="dstufft"
-
-# Like blinks, but it uses 256 colors, so it breaks with Solarized
-#ZSH_THEME="blinks"
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="false"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git sublime)
-
-source $ZSH/oh-my-zsh.sh
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
 # Customize to your needs...
+EDITOR=vim
+VISUAL=vim
 source ~/.extras
 source ~/.aliases
 
-# Trying out Z, it's like J:autojump but more popular on Github
-. `brew --prefix`/etc/profile.d/z.sh
+PATH=$PATH:~/.bin:/usr/local/share/npm/bin
+export PATH="/usr/local/bin:$PATH"
 
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+#export PATH="/usr/local/lib/python2.7/site-packages/powerline/scripts/:$PATH"
+#. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
-# Add SSH key forwarding to remote SSH sessions (is there a better way?)
-ssh-add
+export SDC_CLI_ACCOUNT=drew.miller
+export SDC_CLI_URL="https://165.225.142.135"
+#export SDC_CLI_KEY=`ssh-keygen -l -f ~/.ssh/id_rsa.pub | awk '{print $2}' | tr -d '\n'`
 
-PATH=$PATH:~/.bin
+export MANTA_KEY_ID=`ssh-keygen -l -f ~/.ssh/id_rsa.pub | awk '{print $2}' | tr -d '\n'`
+export MANTA_URL=https://us-east.manta.joyent.com
+export MANTA_USER=drew.miller
+
+export GOROOT=/usr/local/go
+export PATH=$PATH:$GOROOT/bin
+export GOPATH=~/Dropbox/code/goLearn/gopath
+
+export SDC_URL=https://us-west-1.api.joyentcloud.com
+export SDC_ACCOUNT=Joyent_Dev
+export SDC_KEY_ID=`ssh-keygen -l -f ~/.ssh/id_rsa.pub | awk '{print $2}' | tr -d '\n'`
+

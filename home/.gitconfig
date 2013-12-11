@@ -25,16 +25,16 @@
 [apply]
 	# Detect whitespace errors when applying a patch
 	# whitespace = fix causes problems with vim plugins & others because it auto-messes things up
-	whitespace = error
+	#whitespace = error
 	#ignorewhitespace = always
 
 [core]
 	# Use custom `.gitignore` and `.gitattributes`
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/drew/.gitignore
 	attributesfile = ~/.gitattributes
-	autocrlf = false
+	#autocrlf = false
 	# Treat spaces before tabs, lines that are indented with 8 or more spaces, and all kinds of trailing whitespace as an error
-	whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
+	#whitespace = space-before-tab,indent-with-non-tab,trailing-space,cr-at-eol
 
 [color]
 	# Use colors in Git commands that are capable of colored output when outputting to the terminal
@@ -55,6 +55,8 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+[push]
+#	default = simple
 
 # Use `origin` as the default remote on the `master` branch in all cases
 [branch "master"]
@@ -74,3 +76,16 @@
 	pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
 	insteadOf = "gist:"
+[user]
+	name = Drew Miller
+	email = drew666@gmail.com
+[github]
+	user = xer0x
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple

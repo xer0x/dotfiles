@@ -1,4 +1,8 @@
 alias jirash="~/Dropbox/code/jirash/bin/jirash"
+alias devhub="jirash -J https://devhub.joyent.com/jira"
+
+# Prezto uses *fasd* for autojump, z, and v
+alias z=fasd_cd
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
@@ -108,3 +112,5 @@ done
 alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 10'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
+
+alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/sbin/airport"
